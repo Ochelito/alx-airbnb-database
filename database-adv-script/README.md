@@ -27,3 +27,22 @@ This directory contains SQL queries demonstrating the use of different types of 
 ## Files
 - `joins_queries.sql` → SQL commands for the joins
 - `README.md` → Explanation of each query
+
+# SQL Subqueries
+
+This directory contains SQL scripts practicing **subqueries** in the Airbnb database.
+
+## Queries Implemented
+
+1. **Non-Correlated Subquery**
+   - Find all properties where the average rating is greater than 4.0.
+   - Uses a subquery on the `Review` table with `GROUP BY` and `HAVING`.
+
+2. **Correlated Subquery**
+   - Find users who have made more than 3 bookings.
+   - The subquery depends on the outer query (`User.user_id`).
+   - Executes once per user row.
+
+## Files
+- `subqueries.sql` → SQL commands for non-correlated and correlated subqueries.
+- `README.md` → Explanation of each query.
