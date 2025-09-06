@@ -58,11 +58,12 @@ This directory contains SQL queries demonstrating the use of **aggregations** an
    - Finds the total number of bookings made by each user.
    - Groups results by user ID, first name, and last name.
 
-2. **Window Function (RANK)**
+2. **Window Functions (ROW_NUMBER, RANK, DENSE_RANK)**
    - Ranks properties based on the total number of bookings they have received.
-   - Uses `RANK() OVER (ORDER BY COUNT(b.booking_id) DESC)` to assign ranks.
-   - Properties with the same number of bookings share the same rank.
+   - `ROW_NUMBER()` → assigns a unique sequential number to each row.
+   - `RANK()` → assigns the same rank to ties, but leaves gaps in ranking.
+   - `DENSE_RANK()` → assigns the same rank to ties, without leaving gaps.
 
 ## Files
-- `aggregations_and_window_functions.sql` → SQL commands for aggregation and ranking.
+- `aggregations_and_window_functions.sql` → SQL commands for aggregation and window functions.
 - `README.md` → Explanation of each query.
