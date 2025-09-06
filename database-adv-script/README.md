@@ -46,3 +46,23 @@ This directory contains SQL scripts practicing **subqueries** in the Airbnb data
 ## Files
 - `subqueries.sql` → SQL commands for non-correlated and correlated subqueries.
 - `README.md` → Explanation of each query.
+
+
+# Aggregations and Window Functions
+
+This directory contains SQL queries demonstrating the use of **aggregations** and **window functions** in the Airbnb database.
+
+## Queries Implemented
+
+1. **Aggregation (COUNT + GROUP BY)**
+   - Finds the total number of bookings made by each user.
+   - Groups results by user ID, first name, and last name.
+
+2. **Window Function (RANK)**
+   - Ranks properties based on the total number of bookings they have received.
+   - Uses `RANK() OVER (ORDER BY COUNT(b.booking_id) DESC)` to assign ranks.
+   - Properties with the same number of bookings share the same rank.
+
+## Files
+- `aggregations_and_window_functions.sql` → SQL commands for aggregation and ranking.
+- `README.md` → Explanation of each query.
