@@ -8,14 +8,18 @@ SELECT
     u.first_name,
     u.last_name,
     p.property_id,
-    p.title AS property_title,
+    p.name AS property_name,
     pay.payment_id,
     pay.amount,
-    pay.status
+    pay.payment_method
 FROM Bookings b
-JOIN Users u ON b.user_id = u.user_id
-JOIN Properties p ON b.property_id = p.property_id
-JOIN Payments pay ON b.booking_id = pay.booking_id;
+JOIN Users u 
+    ON b.user_id = u.user_id
+JOIN Properties p 
+    ON b.property_id = p.property_id
+JOIN Payments pay 
+    ON b.booking_id = pay.booking_id
+    AND pay.amount > 0; -- example filter condition
 
 -- Step 2: Analyze Query Performance
 -- Use EXPLAIN to analyze execution plan
